@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Forme</title>
+<meta name="description" content="Complete your Forme order. This is a portfolio demo checkout — no real payment is collected.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><div class="announce-track">FREE SHIPPING ON ORDERS OVER $100 — NEW ARRIVALS NOW LIVE</div></div>
+
+<header>
+  <nav>
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="shop.html">Shop</a>
+      </div>
+    </div>
+    <a href="index.html" class="logo">Forme</a>
+    <div class="nav-right">
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8V6a6 6 0 0112 0v2M4 8h16l-1.3 12.1a2 2 0 01-2 1.9H7.3a2 2 0 01-2-1.9L4 8z"/></svg>
+        <span class="icon-count" data-cart-count style="display:none;">0</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+  <div class="nav-links"><a href="shop.html">Shop</a><a href="cart.html">Cart</a></div>
+</div>
+
+<main id="checkoutRoot">
+  <div class="page-header">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="cart.html">Cart</a> / <span>Checkout</span></div>
+      <h1>Checkout</h1>
+    </div>
+  </div>
+
+  <section class="section-tight">
+    <div class="wrap">
+
+      <div class="checkout-layout" id="checkoutFormWrap">
+        <form id="checkoutForm" novalidate>
+          <div class="checkout-section">
+            <h3>Contact</h3>
+            <div class="form-row">
+              <div class="form-field"><label for="co-email">Email</label><input type="email" id="co-email" name="email" required><span class="field-error">Enter a valid email address.</span></div>
+              <div class="form-field"><label for="co-phone">Phone</label><input type="tel" id="co-phone" name="phone" required><span class="field-error">Enter a phone number.</span></div>
+            </div>
+          </div>
+
+          <div class="checkout-section">
+            <h3>Shipping Address</h3>
+            <div class="form-row">
+              <div class="form-field"><label for="co-first">First Name</label><input type="text" id="co-first" name="firstName" required><span class="field-error">Enter your first name.</span></div>
+              <div class="form-field"><label for="co-last">Last Name</label><input type="text" id="co-last" name="lastName" required><span class="field-error">Enter your last name.</span></div>
+            </div>
+            <div class="form-field"><label for="co-address">Address</label><input type="text" id="co-address" name="address" required><span class="field-error">Enter your address.</span></div>
+            <div class="form-row">
+              <div class="form-field"><label for="co-city">City</label><input type="text" id="co-city" name="city" required><span class="field-error">Enter your city.</span></div>
+              <div class="form-field"><label for="co-postal">Postal Code</label><input type="text" id="co-postal" name="postal" required><span class="field-error">Enter a postal code.</span></div>
+            </div>
+            <div class="form-field">
+              <label for="co-country">Country</label>
+              <select id="co-country" name="country" required>
+                <option value="">Select a country</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+                <option>Nigeria</option>
+                <option>Ghana</option>
+                <option>Germany</option>
+                <option>Australia</option>
+              </select>
+              <span class="field-error">Select a country.</span>
+            </div>
+          </div>
+
+          <div class="checkout-section">
+            <h3>Delivery</h3>
+            <div class="delivery-option selected" data-delivery="standard">
+              <div class="delivery-option-left">
+                <div class="radio-dot"></div>
+                <div><div class="delivery-name">Standard Delivery</div><div class="delivery-sub">3 to 5 business days</div></div>
+              </div>
+              <div class="delivery-price">$10</div>
+            </div>
+            <div class="delivery-option" data-delivery="express">
+              <div class="delivery-option-left">
+                <div class="radio-dot"></div>
+                <div><div class="delivery-name">Express Delivery</div><div class="delivery-sub">1 to 2 business days</div></div>
+              </div>
+              <div class="delivery-price">$25</div>
+            </div>
+          </div>
+
+          <div class="checkout-section">
+            <h3>Payment</h3>
+            <div class="payment-simulated">
+              <strong>This is a portfolio demo.</strong> No real payment is collected. Clicking "Place Demo Order" below will simulate a completed purchase and clear your cart.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="padding:18px;">Place Demo Order</button>
+        </form>
+
+        <div class="summary-card" id="checkoutSummaryCard">
+          <h3>Order Summary</h3>
+          <div id="checkoutSummaryList" style="margin-bottom:16px;"></div>
+          <div class="summary-row"><span>Subtotal</span><span id="checkoutSubtotal"></span></div>
+          <div class="summary-row" id="checkoutDiscountRow" style="display:none;"><span>Discount</span><span id="checkoutDiscount"></span></div>
+          <div class="summary-row"><span>Shipping</span><span id="checkoutShipping"></span></div>
+          <div class="summary-row"><span>Estimated tax</span><span id="checkoutTax"></span></div>
+          <div class="summary-row total"><span>Total</span><span id="checkoutTotal"></span></div>
+        </div>
+      </div>
+
+      <div class="confirmation" id="orderConfirmation" style="display:none;">
+        <div class="confirmation-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>
+        </div>
+        <h1>Order Confirmed</h1>
+        <p>Thank you for your order. A confirmation has been sent to your email.</p>
+        <div class="order-number" id="orderNumber"></div>
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© 2026 Forme. All rights reserved.</span>
+      <div class="payment-icons"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span></div>
+      <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Forme</title>
+<meta name="description" content="Notes on materials, care, and the ideas behind each Forme collection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-bar"><div class="announce-track">FREE SHIPPING ON ORDERS OVER $100 — NEW ARRIVALS NOW LIVE</div></div>
+
+<header>
+  <nav>
+    <div class="nav-left">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="shop.html?category=New">New Arrivals</a>
+        <a href="shop.html?category=Women">Women</a>
+        <a href="shop.html?category=Men">Men</a>
+        <a href="shop.html?category=Accessories">Accessories</a>
+        <a href="shop.html?sale=1" class="sale-link">Sale</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+    <a href="index.html" class="logo">Forme</a>
+    <div class="nav-right">
+      <button class="icon-btn" data-search-open aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.6-10-9.1C0.3 8.6 2 5 5.6 5c2 0 3.6 1.1 4.4 2.7C10.8 6.1 12.4 5 14.4 5 18 5 19.7 8.6 18 11.9 15.5 16.4 12 21 12 21z"/></svg>
+        <span class="icon-count" data-wishlist-count style="display:none;">0</span>
+      </a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8V6a6 6 0 0112 0v2M4 8h16l-1.3 12.1a2 2 0 01-2 1.9H7.3a2 2 0 01-2-1.9L4 8z"/></svg>
+        <span class="icon-count" data-cart-count style="display:none;">0</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-close"><button id="drawerClose" aria-label="Close menu">×</button></div>
+  <div class="nav-links">
+    <a href="shop.html?category=New">New Arrivals</a>
+    <a href="shop.html?category=Women">Women</a>
+    <a href="shop.html?category=Men">Men</a>
+    <a href="shop.html?category=Accessories">Accessories</a>
+    <a href="shop.html?sale=1" class="sale-link">Sale</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+      <button class="search-close" id="searchClose" aria-label="Close search">×</button>
+    </div>
+    <div class="search-meta" id="searchMeta"></div>
+    <div id="searchRecent"></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<main>
+  <div class="page-header">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>Journal</span></div>
+      <h1>The Journal</h1>
+      <p>Notes on materials, care, and the thinking behind each collection.</p>
+    </div>
+  </div>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="product-grid" style="grid-template-columns:repeat(3,1fr);">
+
+        <article>
+          <a href="#" class="category-tile" style="aspect-ratio:4/3; margin-bottom:16px;">
+            <div class="placeholder-block"><img src="images/lifestyle/model-walking-cardigan.jpg" alt="Wool cardigan" style="width:100%; height:100%; object-fit:cover;"></div>
+          </a>
+          <div style="color:var(--muted); font-size:0.8rem; margin-bottom:8px;">Materials · Sep 2, 2026</div>
+          <h3 style="font-size:1.15rem; margin-bottom:8px;">Why we chose this wool blend for our first knitwear line</h3>
+          <p style="color:var(--muted); font-size:0.9rem;">A look at the sourcing decisions and testing process behind our most requested cardigan.</p>
+        </article>
+
+        <article>
+          <a href="#" class="category-tile" style="aspect-ratio:4/3; margin-bottom:16px;">
+            <div class="placeholder-block"><img src="images/products/black-cap-toe-boots.jpg" alt="Leather boot care" style="width:100%; height:100%; object-fit:cover;"></div>
+          </a>
+          <div style="color:var(--muted); font-size:0.8rem; margin-bottom:8px;">Care Guide · Aug 19, 2026</div>
+          <h3 style="font-size:1.15rem; margin-bottom:8px;">How to care for full grain leather boots</h3>
+          <p style="color:var(--muted); font-size:0.9rem;">Condition regularly, let them rest between wears, and other habits that extend the life of good leather.</p>
+        </article>
+
+        <article>
+          <a href="#" class="category-tile" style="aspect-ratio:4/3; margin-bottom:16px;">
+            <div class="placeholder-block"><img src="images/hero/hero-studio-forme.jpg" alt="Forme workshop" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;"></div>
+          </a>
+          <div style="color:var(--muted); font-size:0.8rem; margin-bottom:8px;">Behind the Scenes · Aug 4, 2026</div>
+          <h3 style="font-size:1.15rem; margin-bottom:8px;">Inside our workshop in Portugal</h3>
+          <p style="color:var(--muted); font-size:0.9rem;">Meeting the small team of pattern makers and machinists behind every Forme piece.</p>
+        </article>
+
+        <article>
+          <a href="#" class="category-tile" style="aspect-ratio:4/3; margin-bottom:16px;">
+            <div class="placeholder-block"><img src="images/lifestyle/man-olive-blazer-portrait.jpg" alt="Styling a blazer" style="width:100%; height:100%; object-fit:cover;"></div>
+          </a>
+          <div style="color:var(--muted); font-size:0.8rem; margin-bottom:8px;">Style · Jul 22, 2026</div>
+          <h3 style="font-size:1.15rem; margin-bottom:8px;">Five ways to style an unstructured blazer</h3>
+          <p style="color:var(--muted); font-size:0.9rem;">From layering over a knit to wearing it open with denim on the weekend.</p>
+        </article>
+
+        <article>
+          <a href="#" class="category-tile" style="aspect-ratio:4/3; margin-bottom:16px;">
+            <div class="placeholder-block"><img src="images/products/three-duffel-bags-group.jpg" alt="Small batch leather goods" style="width:100%; height:100%; object-fit:cover;"></div>
+          </a>
+          <div style="color:var(--muted); font-size:0.8rem; margin-bottom:8px;">Sustainability · Jul 10, 2026</div>
+          <h3 style="font-size:1.15rem; margin-bottom:8px;">What "small batch" actually means for us</h3>
+          <p style="color:var(--muted); font-size:0.9rem;">Why we cap production runs and what happens to leather offcuts.</p>
+        </article>
+
+        <article>
+          <a href="#" class="category-tile" style="aspect-ratio:4/3; margin-bottom:16px;">
+            <div class="placeholder-block"><img src="images/products/navy-tuxedo-suit-set.jpg" alt="Garment care" style="width:100%; height:100%; object-fit:cover;"></div>
+          </a>
+          <div style="color:var(--muted); font-size:0.8rem; margin-bottom:8px;">Materials · Jun 28, 2026</div>
+          <h3 style="font-size:1.15rem; margin-bottom:8px;">A short guide to reading a garment care label</h3>
+          <p style="color:var(--muted); font-size:0.9rem;">What each symbol actually means, and which ones matter most.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Forme</div>
+        <p>Considered clothing built from honest materials, designed for everyday life.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social-icon" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3c.4 2.2 2 3.8 4.2 4.1v2.6c-1.5 0-3-.4-4.2-1.3v6.6a5.4 5.4 0 11-4.7-5.4v2.7a2.7 2.7 0 102.7 2.7V3z"/></svg></a>
+          <a href="#" class="social-icon" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M9.5 17.5c1-3 1.5-5 2.2-7.7A2.3 2.3 0 0116 10.5c0 2-1.2 4-3.2 4-.6 0-1.1-.2-1.4-.6"/></svg></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M10.3 9.6l5 2.4-5 2.4z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?category=New">New Arrivals</a></li>
+          <li><a href="shop.html?category=Women">Women</a></li>
+          <li><a href="shop.html?category=Men">Men</a></li>
+          <li><a href="shop.html?category=Accessories">Accessories</a></li>
+          <li><a href="shop.html?sale=1">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Shipping</a></li>
+          <li><a href="contact.html">Returns</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="contact.html">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="about.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Email</h4>
+        <a href="mailto:hello@forme.com">hello@forme.com</a>
+        <form data-newsletter-form>
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Join</button>
+        </form>
+        <div class="newsletter-success">✓ You're on the list</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Forme. All rights reserved.</span>
+      <div class="payment-icons"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span></div>
+      <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
